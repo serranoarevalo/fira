@@ -11,6 +11,11 @@ module.exports = {
   rules: {
     "ecmaFeatures.classes": true,
     "global-require": "off",
+<<<<<<< HEAD
     "no-console": "off"
+=======
+    "no-console": "off",
+    "react/jsx-filename-extension": "off"
+>>>>>>> master
   }
 };
