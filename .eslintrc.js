@@ -12,6 +12,7 @@ module.exports = {
     "ecmaFeatures.classes": true,
     "global-require": "off",
     "no-console": "off",
-    "react/jsx-filename-extension": "off"
+    "react/jsx-filename-extension": "off",
+    "react/display-name": "off"
   }
 };

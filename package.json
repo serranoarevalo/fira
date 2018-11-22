@@ -17,9 +17,14 @@
     "expo": "^31.0.2",
     "react": "16.5.0",
     "react-native": "https://github.com/expo/react-native/archive/sdk-31.0.0.tar.gz",
-    "react-navigation": "^2.18.2"
+    "react-navigation": "^2.18.2",
+    "styled-components": "^4.1.1"
   },
   "devDependencies": {
+    "@types/expo": "^31.0.0",
+    "@types/expo__vector-icons": "^6.2.3",
+    "@types/react": "^16.7.6",
+    "@types/react-native": "^0.57.13",
     "babel-eslint": "^10.0.1",
     "babel-preset-expo": "^5.0.0",
     "eslint": "^5.9.0",
@@ -30,6 +35,7 @@
     "eslint-plugin-prettier": "^3.0.0",
     "eslint-plugin-react": "^7.11.1",
     "jest-expo": "^31.0.0",
-    "prettier": "^1.15.2"
+    "prettier": "^1.15.2",
+    "tslib": "^1.9.3"
   }
 }
