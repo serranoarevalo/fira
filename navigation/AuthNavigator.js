@@ -9,6 +9,6 @@ export default createStackNavigator(
     Signup: SignupScreen
   },
   {
-    initialRouteName: "Login"
+    initialRouteName: "Signup"
   }
 );
