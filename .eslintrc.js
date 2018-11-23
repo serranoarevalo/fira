@@ -3,7 +3,9 @@ module.exports = {
   extends: [
     "airbnb",
     "plugin:prettier/recommended",
-    "plugin:react/recommended"
+    "plugin:react/recommended",
+    "plugin:import/warnings",
+    "plugin:import/errors"
   ],
   env: {
     es6: true
@@ -13,6 +15,7 @@ module.exports = {
     "global-require": "off",
     "no-console": "off",
     "react/jsx-filename-extension": "off",
-    "react/display-name": "off"
+    "react/display-name": "off",
+    "react/prop-types": "off"
   }
 };
