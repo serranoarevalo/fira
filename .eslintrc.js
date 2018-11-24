@@ -3,9 +3,7 @@ module.exports = {
   extends: [
     "airbnb",
     "plugin:prettier/recommended",
-    "plugin:react/recommended",
-    "plugin:import/warnings",
-    "plugin:import/errors"
+    "plugin:react/recommended"
   ],
   env: {
     es6: true

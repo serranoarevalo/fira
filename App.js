@@ -16,16 +16,16 @@ export default class App extends React.Component {
     isLoadingComplete: false
   };
 
-  loadResourcesAsync = async () =>
-    Promise.all([
-      Asset.loadAsync([
-        require("./assets/images/robot-dev.png"),
-        require("./assets/images/robot-prod.png")
-      ]),
-      Font.loadAsync({
-        ...Ionicons.font
-      })
+  loadResourcesAsync = async () => {
+    await Asset.loadAsync([
+      require("./assets/images/authBackground.jpg"),
+      require("./assets/images/robot-dev.png"),
+      require("./assets/images/robot-prod.png")
     ]);
+    await Font.loadAsync({
+      ...Ionicons.font
+    });
+  };
 
   handleLoadingError = error => {
     console.warn(error);

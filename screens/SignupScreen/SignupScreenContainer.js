@@ -2,6 +2,10 @@ import React from "react";
 import SignupScreenPresenter from "./SignupScreenPresenter";
 
 class SignupScreen extends React.Component {
+  static navigationOptions = {
+    header: null
+  };
+
   state = {
     withEmail: false
   };

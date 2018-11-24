@@ -5,10 +5,11 @@ import SignupScreen from "../screens/SignupScreen";
 
 export default createStackNavigator(
   {
-    Login: LoginScreen,
-    Signup: SignupScreen
+    Signup: SignupScreen,
+    Login: LoginScreen
   },
   {
-    initialRouteName: "Signup"
+    initialRouteName: "Signup",
+    mode: "modal"
   }
 );
