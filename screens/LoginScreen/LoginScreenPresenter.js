@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
+import { withNavigation } from "react-navigation";
 import { StatusBar } from "react-native";
 import Layout from "../../constants/Layout";
 import SocialLogin from "../../components/SocialLogin";
@@ -24,7 +25,7 @@ const ImageBg = styled.Image`
 const ButtonsContainer = styled.View`
   justify-content: flex-end;
   flex: 1;
-  width: 60%;
+  width: 80%;
 `;
 
 const Divider = styled.Text`
@@ -43,12 +44,16 @@ const EmailAuth = styled.KeyboardAvoidingView`
 `;
 
 const EmailAuthForm = styled.View`
-  margin-top: 20px;
   width: 100%;
   margin-bottom: 25px;
 `;
 
-const LoginScreenPresenter = ({ email = "", password = "", onInputChange }) => (
+const LoginScreenPresenter = ({
+  email = "",
+  password = "",
+  onInputChange,
+  navigation
+}) => (
   <Container>
     <ImageBg
       source={require("../../assets/images/authBackground.jpg")}
@@ -74,7 +79,11 @@ const LoginScreenPresenter = ({ email = "", password = "", onInputChange }) => (
             password
             onChange={onInputChange}
           />
-          <AuthButton transparent={false} text="Login" onPress={() => null} />
+          <AuthButton
+            transparent={false}
+            text="Login"
+            onPress={() => navigation.navigate("Main")}
+          />
         </EmailAuthForm>
       </EmailAuth>
       <AuthTextContainer>
@@ -90,4 +99,4 @@ LoginScreenPresenter.propTypes = {
   password: PropTypes.string
 };
 
-export default LoginScreenPresenter;
+export default withNavigation(LoginScreenPresenter);

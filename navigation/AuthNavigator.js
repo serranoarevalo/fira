@@ -1,5 +1,5 @@
 import { createStackNavigator } from "react-navigation";
-
+import { Platform } from "react-native";
 import LoginScreen from "../screens/LoginScreen";
 import SignupScreen from "../screens/SignupScreen";
 
@@ -31,8 +31,12 @@ export default createStackNavigator(
   {
     initialRouteName: "Signup",
     headerMode: "none",
-    transitionConfig: () => ({
-      screenInterpolator: props => fade(props)
+    ...Platform.select({
+      ios: {
+        transitionConfig: () => ({
+          screenInterpolator: props => fade(props)
+        })
+      }
     })
   }
 );

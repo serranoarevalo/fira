@@ -25,7 +25,7 @@ const ImageBg = styled.Image`
 const ButtonsContainer = styled.View`
   justify-content: flex-end;
   flex: 1;
-  width: 60%;
+  width: 80%;
 `;
 
 const Divider = styled.Text`
@@ -45,7 +45,7 @@ const EmailAuth = styled.KeyboardAvoidingView`
 
 const EmailAuthForm = styled.View`
   margin-top: 20px;
-  width: 70%;
+  width: 100%;
   margin-bottom: 25px;
 `;
 
