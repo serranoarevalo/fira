@@ -3,6 +3,7 @@ import { TouchableOpacity } from "react-native";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import Layout from "../../constants/Layout";
+import Mixins from "../../constants/Mixins";
 
 const Container = styled.View`
   background-color: ${props => (props.transparent ? "transparent" : "#FFFFFF")};
@@ -11,20 +12,14 @@ const Container = styled.View`
   align-items: center;
   justify-content: center;
   padding: 15px 30px;
-  border: ${prosp =>
-    prosp.transparent ? "2px solid rgba(255, 255, 255, 0.5)" : ""};
+  border: ${prosp => (prosp.transparent ? Mixins.authBorder : "")};
 `;
 
-const BigButton = ({ transparent, children, onTap }) => (
-  <TouchableOpacity onPress={onTap}>
+const BigButton = ({ transparent = false, children, onPress }) => (
+  <TouchableOpacity onPress={onPress}>
     <Container transparent={transparent}>{children}</Container>
   </TouchableOpacity>
 );
-
-BigButton.defaultProps = {
-  transparent: false,
-  onTap: () => null
-};
 
 BigButton.propTypes = {
   transparent: PropTypes.bool,
@@ -32,7 +27,7 @@ BigButton.propTypes = {
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node
   ]).isRequired,
-  onTap: PropTypes.func
+  onPress: PropTypes.func.isRequired
 };
 
 export default BigButton;

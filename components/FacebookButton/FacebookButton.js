@@ -8,7 +8,7 @@ const Text = styled.Text`
 `;
 
 const FacebookButton = () => (
-  <BigButton transparent={false} onTap={() => null}>
+  <BigButton transparent={false} onPress={() => null}>
     <Ionicons name="logo-facebook" size={22} color="#3b5998" />
     <Text>Continue with Facebook</Text>
   </BigButton>

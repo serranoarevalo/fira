@@ -8,7 +8,7 @@ const Text = styled.Text`
 `;
 
 const GoogleButton = () => (
-  <BigButton transparent={false} onTap={() => null}>
+  <BigButton transparent={false} onPress={() => null}>
     <Ionicons name="logo-google" size={22} color="#4287F6" />
     <Text>Continue with Google</Text>
   </BigButton>

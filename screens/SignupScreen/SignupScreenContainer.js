@@ -7,12 +7,39 @@ class SignupScreen extends React.Component {
   };
 
   state = {
-    withEmail: false
+    withEmail: true,
+    name: "",
+    email: "",
+    password: ""
+  };
+
+  toggleMethod = () => {
+    // eslint-disable-next-line
+    this.setState(current => {
+      return {
+        withEmail: !current.withEmail
+      };
+    });
+  };
+
+  onInputChange = (text, name) => {
+    this.setState({
+      [name]: text
+    });
   };
 
   render() {
-    const { withEmail } = this.state;
-    return <SignupScreenPresenter withEmail={withEmail} />;
+    const { withEmail, name, email, password } = this.state;
+    return (
+      <SignupScreenPresenter
+        name={name}
+        email={email}
+        password={password}
+        withEmail={withEmail}
+        toggleMethod={this.toggleMethod}
+        onInputChange={this.onInputChange}
+      />
+    );
   }
 }
 

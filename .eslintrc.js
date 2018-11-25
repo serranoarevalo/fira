@@ -14,6 +14,7 @@ module.exports = {
     "no-console": "off",
     "react/jsx-filename-extension": "off",
     "react/display-name": "off",
-    "react/prop-types": "off"
+    "react/prop-types": "off",
+    "react/require-default-props": "off"
   }
 };

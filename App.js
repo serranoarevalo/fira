@@ -22,9 +22,7 @@ export default class App extends React.Component {
       require("./assets/images/robot-dev.png"),
       require("./assets/images/robot-prod.png")
     ]);
-    await Font.loadAsync({
-      ...Ionicons.font
-    });
+    await Font.loadAsync(Ionicons.font);
   };
 
   handleLoadingError = error => {
