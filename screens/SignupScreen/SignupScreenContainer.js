@@ -7,7 +7,7 @@ class SignupScreen extends React.Component {
   };
 
   state = {
-    withEmail: true,
+    withEmail: false,
     name: "",
     email: "",
     password: ""

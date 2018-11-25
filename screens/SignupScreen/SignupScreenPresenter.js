@@ -70,16 +70,24 @@ const SignupScreenPresenter = ({
           color="rgba(255, 255, 255, 0.5)"
         />
         <EmailAuthForm>
-          <AuthInput placeholder="Name" value={name} onChange={onInputChange} />
           <AuthInput
+            placeholder="Name"
+            value={name}
+            onChange={onInputChange}
+            name="name"
+          />
+          <AuthInput
+            name="email"
             placeholder="Email"
             value={email}
             keyboardType="email-address"
             onChange={onInputChange}
           />
           <AuthInput
+            name="password"
             placeholder="Password"
             value={password}
+            password
             onChange={onInputChange}
           />
           <AuthButton transparent={false} text="Signup" onPress={() => null} />

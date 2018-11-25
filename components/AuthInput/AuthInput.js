@@ -9,6 +9,7 @@ const Input = styled.TextInput`
   border: ${Mixins.authBorder};
   border-radius: ${Layout.btnRadius};
   width: 100%;
+  color: white;
   margin-bottom: 20px;
 `;
 
@@ -17,10 +18,11 @@ const AuthInput = ({
   password = false,
   value,
   keyboardType = "default",
-  onChange
+  onChange,
+  name
 }) => (
   <Input
-    onChangeText={onChange}
+    onChangeText={text => onChange(text, name)}
     placeholder={placeholder}
     value={value}
     keyboardType={keyboardType}
@@ -30,9 +32,11 @@ const AuthInput = ({
 );
 
 AuthInput.propTypes = {
+  name: PropTypes.string.isRequired,
   placeholder: PropTypes.string.isRequired,
   value: PropTypes.string.isRequired,
   keyboardType: PropTypes.string,
+  password: PropTypes.bool,
   onChange: PropTypes.func.isRequired
 };
 
