@@ -25,6 +25,7 @@ const ImageBg = styled.Image`
 const ButtonsContainer = styled.View`
   justify-content: flex-end;
   flex: 1;
+  width: 60%;
 `;
 
 const Divider = styled.Text`
@@ -62,55 +63,61 @@ const SignupScreenPresenter = ({
       resizeMode="cover"
     />
     <StatusBar barStyle="light-content" />
-    {withEmail ? (
-      <EmailAuth behavior="padding" enabled>
-        <IconButton
-          icon={Platform.OS === "ios" ? "ios-arrow-back" : "md-arrow-back"}
-          onPress={toggleMethod}
-          color="rgba(255, 255, 255, 0.5)"
-        />
-        <EmailAuthForm>
-          <AuthInput
-            placeholder="Name"
-            value={name}
-            onChange={onInputChange}
-            name="name"
+    <ButtonsContainer>
+      {withEmail ? (
+        <EmailAuth behavior="padding" enabled>
+          <IconButton
+            icon={Platform.OS === "ios" ? "ios-arrow-back" : "md-arrow-back"}
+            onPress={toggleMethod}
+            color="rgba(255, 255, 255, 0.5)"
           />
-          <AuthInput
-            name="email"
-            placeholder="Email"
-            value={email}
-            keyboardType="email-address"
-            onChange={onInputChange}
+          <EmailAuthForm>
+            <AuthInput
+              placeholder="Name"
+              value={name}
+              onChange={onInputChange}
+              name="name"
+            />
+            <AuthInput
+              name="email"
+              placeholder="Email"
+              value={email}
+              keyboardType="email-address"
+              onChange={onInputChange}
+            />
+            <AuthInput
+              name="password"
+              placeholder="Password"
+              value={password}
+              password
+              onChange={onInputChange}
+            />
+            <AuthButton
+              transparent={false}
+              text="Signup"
+              onPress={() => null}
+            />
+          </EmailAuthForm>
+        </EmailAuth>
+      ) : (
+        <>
+          <SocialLogin />
+          <Divider>or</Divider>
+          <AuthButton
+            transparent
+            text="Signup with Email"
+            onPress={toggleMethod}
           />
-          <AuthInput
-            name="password"
-            placeholder="Password"
-            value={password}
-            password
-            onChange={onInputChange}
-          />
-          <AuthButton transparent={false} text="Signup" onPress={() => null} />
-        </EmailAuthForm>
-      </EmailAuth>
-    ) : (
-      <ButtonsContainer>
-        <SocialLogin />
-        <Divider>or</Divider>
-        <AuthButton
-          transparent
-          text="Signup with Email"
-          onPress={toggleMethod}
-        />
-        <AuthTextContainer>
-          <AuthText
-            text="Existing user? "
-            link="Login now"
-            screenName="Login"
-          />
-        </AuthTextContainer>
-      </ButtonsContainer>
-    )}
+          <AuthTextContainer>
+            <AuthText
+              text="Existing user? "
+              link="Login now"
+              screenName="Login"
+            />
+          </AuthTextContainer>
+        </>
+      )}
+    </ButtonsContainer>
   </Container>
 );
 

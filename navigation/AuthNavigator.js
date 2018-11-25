@@ -32,9 +32,7 @@ export default createStackNavigator(
     initialRouteName: "Signup",
     headerMode: "none",
     transitionConfig: () => ({
-      screenInterpolator: props => {
-        return fade(props);
-      }
+      screenInterpolator: props => fade(props)
     })
   }
 );

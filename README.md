@@ -7,7 +7,7 @@ Download in [Codekits](https://codekits.co/fira.html)
 ## Screens
 
 - [x] Sign Up
-- [ ] Log In
+- [x] Log In
 - [ ] Home
 - [ ] Product Detail
 - [ ] Messages
