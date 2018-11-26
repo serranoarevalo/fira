@@ -35,9 +35,14 @@ HomeStack.navigationOptions = {
   )
 };
 
-const SearchStack = createStackNavigator({
-  Search: SearchScreen
-});
+const SearchStack = createStackNavigator(
+  {
+    Search: SearchScreen
+  },
+  {
+    navigationOptions: { ...StackNavOptions }
+  }
+);
 
 SearchStack.navigationOptions = {
   tabBarIcon: ({ focused }) => (
@@ -48,9 +53,14 @@ SearchStack.navigationOptions = {
   )
 };
 
-const MessageStack = createStackNavigator({
-  Links: LinksScreen
-});
+const MessageStack = createStackNavigator(
+  {
+    Links: LinksScreen
+  },
+  {
+    navigationOptions: { ...StackNavOptions }
+  }
+);
 
 MessageStack.navigationOptions = {
   tabBarIcon: ({ focused }) => (
@@ -61,9 +71,14 @@ MessageStack.navigationOptions = {
   )
 };
 
-const ProfileStack = createStackNavigator({
-  Profile: SettingsScreen
-});
+const ProfileStack = createStackNavigator(
+  {
+    Profile: SettingsScreen
+  },
+  {
+    navigationOptions: { ...StackNavOptions }
+  }
+);
 
 ProfileStack.navigationOptions = {
   tabBarIcon: ({ focused }) => (
@@ -82,6 +97,7 @@ export default createBottomTabNavigator(
     ProfileStack
   },
   {
+    initialRouteName: "SearchStack",
     tabBarOptions: {
       showLabel: false,
       style: {

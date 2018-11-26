@@ -8,5 +8,6 @@ export default {
   tabBar: "#fff",
   tabBarBorderTop: "#E9E9E9",
   greyColor: "#A9A9B0",
+  darkGreyColor: "#F8F8F8",
   authBorderColor
 };
