@@ -9,6 +9,7 @@ Download in [Codekits](https://codekits.co/fira.html)
 - [x] Sign Up
 - [x] Log In
 - [ ] Home
+- [ ] Search
 - [ ] Product Detail
 - [ ] Messages
 - [ ] Message Thread

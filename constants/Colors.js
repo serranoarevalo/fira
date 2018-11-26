@@ -1,16 +1,12 @@
-const tintColor = "#2f95dc";
+const tintColor = "#118DF0";
 const authBorderColor = "rgba(255, 255, 255, 0.5)";
 
 export default {
   tintColor,
-  tabIconDefault: "#ccc",
+  tabIconDefault: "#C4C4C4",
   tabIconSelected: tintColor,
-  tabBar: "#fefefe",
-  errorBackground: "red",
-  errorText: "#fff",
-  warningBackground: "#EAEB5E",
-  warningText: "#666804",
-  noticeBackground: tintColor,
-  noticeText: "#fff",
+  tabBar: "#fff",
+  tabBarBorderTop: "#E9E9E9",
+  greyColor: "#A9A9B0",
   authBorderColor
 };

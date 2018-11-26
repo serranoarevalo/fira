@@ -1,7 +1,7 @@
 import React from "react";
 import LoginScreenPresenter from "./LoginScreenPresenter";
 
-class LoginScreenContainer extends React.Component {
+export default class extends React.Component {
   state = {
     email: "",
     password: ""
@@ -24,5 +24,3 @@ class LoginScreenContainer extends React.Component {
     );
   }
 }
-
-export default LoginScreenContainer;

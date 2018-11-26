@@ -1,7 +1,7 @@
 import React from "react";
 import SignupScreenPresenter from "./SignupScreenPresenter";
 
-class SignupScreen extends React.Component {
+export default class extends React.Component {
   static navigationOptions = {
     header: null
   };
@@ -42,5 +42,3 @@ class SignupScreen extends React.Component {
     );
   }
 }
-
-export default SignupScreen;

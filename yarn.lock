@@ -5943,6 +5943,19 @@ react-lifecycles-compat@^3, react-lifecycles-compat@^3.0.4:
   resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
   integrity sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==
 
+react-native-android-image-polyfill@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/react-native-android-image-polyfill/-/react-native-android-image-polyfill-1.0.0.tgz#f0b61bac0c6a91b8f8f81233ab1998613adf64ac"
+  integrity sha1-8LYbrAxqkbj4+BIzqxmYYTrfZKw=
+
+react-native-auto-height-image@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/react-native-auto-height-image/-/react-native-auto-height-image-1.0.5.tgz#97ae79854cf39171c80f165a5a6514da4364419e"
+  integrity sha512-BsLeLUcQUOL5q1UR3/XBlaCnJY7F6Tv4CflwjwsVgFBmL5qtIQFXlqI4T/+4hVpqo4kB7zPsqkhUxHe50JG9Yg==
+  dependencies:
+    prop-types "^15.5.8"
+    react-native-android-image-polyfill "^1.0.0"
+
 react-native-branch@2.2.5:
   version "2.2.5"
   resolved "https://registry.yarnpkg.com/react-native-branch/-/react-native-branch-2.2.5.tgz#4074dd63b4973e6397d9ce50e97b57c77a518e9d"

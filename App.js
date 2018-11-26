@@ -8,7 +8,7 @@ import AppNavigator from "./navigation/AppNavigator";
 
 const Container = styled.View`
   flex: 1;
-  background-color: #fff;
+  background-color: white;
 `;
 
 export default class App extends React.Component {
@@ -17,11 +17,7 @@ export default class App extends React.Component {
   };
 
   loadResourcesAsync = async () => {
-    await Asset.loadAsync([
-      require("./assets/images/authBackground.jpg"),
-      require("./assets/images/robot-dev.png"),
-      require("./assets/images/robot-prod.png")
-    ]);
+    await Asset.loadAsync([require("./assets/images/authBackground.jpg")]);
     await Font.loadAsync(Ionicons.font);
   };
 
