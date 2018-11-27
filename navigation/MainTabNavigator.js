@@ -40,7 +40,13 @@ const SearchStack = createStackNavigator(
     Search: SearchScreen
   },
   {
-    navigationOptions: { ...StackNavOptions }
+    navigationOptions: {
+      ...StackNavOptions,
+      headerStyle: {
+        ...StackNavOptions.headerStyle,
+        ...Platform.select({ ios: { height: 70 } })
+      }
+    }
   }
 );
 

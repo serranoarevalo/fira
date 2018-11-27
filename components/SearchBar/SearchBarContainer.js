@@ -21,6 +21,12 @@ export default class extends React.Component {
     });
   };
 
+  clearValue = () => {
+    this.setState({
+      value: ""
+    });
+  };
+
   render() {
     const { value } = this.state;
     const { onSubmit } = this.props;
@@ -29,6 +35,7 @@ export default class extends React.Component {
         value={value}
         onSubmit={onSubmit}
         updateValue={this.updateValue}
+        clearValue={this.clearValue}
       />
     );
   }

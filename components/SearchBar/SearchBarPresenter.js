@@ -1,5 +1,5 @@
 import React from "react";
-import { Platform } from "react-native";
+import { Platform, TouchableOpacity } from "react-native";
 import styled from "styled-components";
 import { Ionicons } from "@expo/vector-icons";
 import PropTypes from "prop-types";
@@ -9,25 +9,35 @@ const Container = styled.View`
   flex: 1;
   padding-horizontal: 20px;
   position: relative;
-  padding-vertical: 15px;
+  flex-direction: row;
+  align-items: center;
 `;
 
 const Input = styled.TextInput`
-  background-color: ${Colors.darkGreyColor};
+  background-color: ${Platform.OS === "ios" ? Colors.darkGreyColor : "white"};
   border-radius: 18px;
   padding-horizontal: 15px;
-  flex: 1;
+  width: ${Platform.OS === "ios" ? "100%" : "91%"};
+  margin-right: 10px;
+  height: ${Platform.OS === "ios" ? "40px" : "auto"};
 `;
 
 const XButton = styled.View`
-  position: absolute;
-  right: 0;
-  width: 25px;
   height: 25px;
+  width: 25px;
+  align-items: center;
   background-color: white;
+  border-radius: 12.5px;
+  ${() => {
+    if (Platform.OS === "ios") {
+      return `position: relative;
+  left: -50px;`;
+    }
+    return "";
+  }}
 `;
 
-const SearchBarPresenter = ({ onSubmit, value, updateValue }) => (
+const SearchBarPresenter = ({ onSubmit, value, updateValue, clearValue }) => (
   <Container>
     <Input
       value={value}
@@ -35,19 +45,22 @@ const SearchBarPresenter = ({ onSubmit, value, updateValue }) => (
       onSubmitEditing={onSubmit}
       placeholder="Search for a product"
     />
-    <XButton>
-      <Ionicons
-        size={18}
-        name={Platform.OS === "ios" ? "ios-close" : "md-close"}
-      />
-    </XButton>
+    <TouchableOpacity onPress={clearValue}>
+      <XButton>
+        <Ionicons
+          size={25}
+          name={Platform.OS === "ios" ? "ios-close" : "md-close"}
+        />
+      </XButton>
+    </TouchableOpacity>
   </Container>
 );
 
 SearchBarPresenter.propTypes = {
   onSubmit: PropTypes.func.isRequired,
   value: PropTypes.string.isRequired,
-  updateValue: PropTypes.func.isRequired
+  updateValue: PropTypes.func.isRequired,
+  clearValue: PropTypes.func.isRequired
 };
 
 export default SearchBarPresenter;
