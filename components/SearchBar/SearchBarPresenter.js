@@ -17,24 +17,18 @@ const Input = styled.TextInput`
   background-color: ${Platform.OS === "ios" ? Colors.darkGreyColor : "white"};
   border-radius: 18px;
   padding-horizontal: 15px;
-  width: ${Platform.OS === "ios" ? "100%" : "91%"};
+  width: ${Platform.OS === "ios" ? "90%" : "91%"};
   margin-right: 10px;
   height: ${Platform.OS === "ios" ? "40px" : "auto"};
 `;
 
 const XButton = styled.View`
-  height: 25px;
-  width: 25px;
+  height: 30px;
+  width: 30px;
   align-items: center;
   background-color: white;
-  border-radius: 12.5px;
-  ${() => {
-    if (Platform.OS === "ios") {
-      return `position: relative;
-  left: -50px;`;
-    }
-    return "";
-  }}
+  border-radius: 15px;
+  z-index: 10;
 `;
 
 const SearchBarPresenter = ({ onSubmit, value, updateValue, clearValue }) => (
@@ -44,11 +38,14 @@ const SearchBarPresenter = ({ onSubmit, value, updateValue, clearValue }) => (
       onChangeText={updateValue}
       onSubmitEditing={onSubmit}
       placeholder="Search for a product"
+      blurOnSubmit
+      returnKeyType="search"
+      underlineColorAndroid="white"
     />
-    <TouchableOpacity onPress={clearValue}>
+    <TouchableOpacity onPressIn={clearValue}>
       <XButton>
         <Ionicons
-          size={25}
+          size={30}
           name={Platform.OS === "ios" ? "ios-close" : "md-close"}
         />
       </XButton>

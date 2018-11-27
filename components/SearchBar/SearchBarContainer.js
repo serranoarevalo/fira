@@ -27,13 +27,18 @@ export default class extends React.Component {
     });
   };
 
-  render() {
+  onSubmit = () => {
     const { value } = this.state;
     const { onSubmit } = this.props;
+    onSubmit(value);
+  };
+
+  render() {
+    const { value } = this.state;
     return (
       <SearchBarPresenter
         value={value}
-        onSubmit={onSubmit}
+        onSubmit={this.onSubmit}
         updateValue={this.updateValue}
         clearValue={this.clearValue}
       />

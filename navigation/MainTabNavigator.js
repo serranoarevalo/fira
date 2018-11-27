@@ -13,7 +13,7 @@ import SettingsScreen from "../screens/SettingsScreen";
 import Colors from "../constants/Colors";
 
 const StackNavOptions = {
-  headerStyle: { borderBottomColor: Colors.tabBarBorderTop },
+  headerStyle: { borderBottomColor: Colors.tabBarBorderTop, height: 70 },
   headerTitleStyle: { fontSize: 14 }
 };
 
@@ -41,11 +41,7 @@ const SearchStack = createStackNavigator(
   },
   {
     navigationOptions: {
-      ...StackNavOptions,
-      headerStyle: {
-        ...StackNavOptions.headerStyle,
-        ...Platform.select({ ios: { height: 70 } })
-      }
+      ...StackNavOptions
     }
   }
 );

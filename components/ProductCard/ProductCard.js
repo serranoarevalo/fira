@@ -10,7 +10,7 @@ const Container = styled.View`
 `;
 
 const ImageContainer = styled.View`
-  box-shadow: 0px 10px 15px rgba(60, 60, 60, 0.2);
+  box-shadow: 0px 10px 15px rgba(60, 60, 60, 0.4);
   width: ${Layout.window.width / 2 - 30};
   border-radius: 15px;
   elevation: 4;

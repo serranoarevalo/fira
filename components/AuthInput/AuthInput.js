@@ -28,6 +28,7 @@ const AuthInput = ({
     keyboardType={keyboardType}
     secureTextEntry={password}
     placeholderTextColor="white"
+    underlineColorAndroid="transparent"
   />
 );
 
