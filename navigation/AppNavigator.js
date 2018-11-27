@@ -3,14 +3,31 @@ import { createSwitchNavigator, createStackNavigator } from "react-navigation";
 import MainTabNavigator from "./MainTabNavigator";
 import AuthNavigator from "./AuthNavigator";
 import ProductScreen from "../screens/ProductScreen";
+import Colors from "../constants/Colors";
 
 const ScreensStack = createStackNavigator(
   {
-    Tabs: MainTabNavigator,
-    Product: ProductScreen
+    Tabs: {
+      screen: MainTabNavigator,
+      navigationOptions: {
+        header: null,
+        headerTransparent: true
+      }
+    },
+    Product: {
+      screen: ProductScreen,
+      navigationOptions: {
+        headerTintColor: Colors.blackColor,
+        headerTransparent: true
+      }
+    }
   },
   {
-    headerMode: "none"
+    navigationOptions: {
+      headerStyle: {
+        height: 70
+      }
+    }
   }
 );
 
