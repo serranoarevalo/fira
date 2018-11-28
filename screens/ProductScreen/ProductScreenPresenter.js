@@ -6,8 +6,6 @@ import Layout from "../../constants/Layout";
 import Colors from "../../constants/Colors";
 import UserPartials from "../../components/UserPartials";
 
-console.log(Layout.window.height <= 667);
-
 const getHeight = () =>
   Layout.window.height <= 667
     ? Layout.window.height / 2.8

@@ -99,7 +99,7 @@ export default createBottomTabNavigator(
     ProfileStack
   },
   {
-    initialRouteName: "MessageStack",
+    initialRouteName: "HomeStack",
     tabBarOptions: {
       showLabel: false,
       style: {

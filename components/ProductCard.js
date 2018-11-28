@@ -17,6 +17,7 @@ const ImageContainer = styled.View`
   border-radius: 15px;
   elevation: 4;
   margin-bottom: 15px;
+  min-height: 150px;
 `;
 
 const Name = styled.Text`

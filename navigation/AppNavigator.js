@@ -1,11 +1,11 @@
 import { createSwitchNavigator, createStackNavigator } from "react-navigation";
+import { Platform } from "react-native";
 
 import MainTabNavigator from "./MainTabNavigator";
 import AuthNavigator from "./AuthNavigator";
 import ProductScreen from "../screens/ProductScreen";
 import ThreadScreen from "../screens/ThreadScreen";
 import Colors from "../constants/Colors";
-import { Platform } from "react-native";
 
 const ScreensStack = createStackNavigator(
   {
@@ -41,12 +41,8 @@ const ScreensStack = createStackNavigator(
     }
   },
   {
-    navigationOptions: {
-      headerStyle: {
-        height: 70
-      }
-    },
-    initialRouteName: "Thread"
+    initialRouteName: "Tabs",
+    headerMode: "screen"
   }
 );
 
