@@ -1,5 +1,5 @@
 import React from "react";
-import { TouchableOpacity } from "react-native";
+import { TouchableWithoutFeedback } from "react-native";
 import AutoHeightImage from "react-native-auto-height-image";
 import { withNavigation } from "react-navigation";
 import PropTypes from "prop-types";
@@ -32,7 +32,7 @@ const Price = styled.Text`
 `;
 
 const ProductCard = ({ imgSrc, name, price, navigation }) => (
-  <TouchableOpacity onPress={() => navigation.navigate("Product")}>
+  <TouchableWithoutFeedback onPress={() => navigation.navigate("Product")}>
     <Container>
       <ImageContainer>
         <AutoHeightImage
@@ -46,7 +46,7 @@ const ProductCard = ({ imgSrc, name, price, navigation }) => (
       <Name>{name}</Name>
       <Price>{`$${price}`}</Price>
     </Container>
-  </TouchableOpacity>
+  </TouchableWithoutFeedback>
 );
 
 ProductCard.propTypes = {

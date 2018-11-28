@@ -53,7 +53,7 @@ const UserPartials = ({ avatarUrl, rating, name }) => (
 );
 
 UserPartials.propTypes = {
-  avatarUrl: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+  avatarUrl: PropTypes.oneOfType([PropTypes.number, PropTypes.object]),
   rating: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired
 };
