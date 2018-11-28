@@ -17,7 +17,10 @@ export default class App extends React.Component {
   };
 
   loadResourcesAsync = async () => {
-    await Asset.loadAsync([require("./assets/images/authBackground.jpg")]);
+    await Asset.loadAsync([
+      require("./assets/images/authBackground.jpg"),
+      require("./assets/images/smAvatar.png")
+    ]);
     await Font.loadAsync(Ionicons.font);
   };
 

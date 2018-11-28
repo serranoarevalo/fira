@@ -14,7 +14,7 @@ import Colors from "../constants/Colors";
 
 const StackNavOptions = {
   headerStyle: { borderBottomColor: Colors.tabBarBorderTop, height: 70 },
-  headerTitleStyle: { fontSize: 14 }
+  headerTitleStyle: { fontSize: 14, color: Colors.blackColor }
 };
 
 const HomeStack = createStackNavigator(

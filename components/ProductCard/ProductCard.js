@@ -22,12 +22,13 @@ const ImageContainer = styled.View`
 const Name = styled.Text`
   color: ${Colors.greyColor};
   margin-left: 10px;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 `;
 
 const Price = styled.Text`
   font-weight: 600;
   margin-left: 10px;
+  color: ${Colors.blackColor};
 `;
 
 const ProductCard = ({ imgSrc, name, price, navigation }) => (

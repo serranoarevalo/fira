@@ -10,5 +10,6 @@ export default {
   greyColor: "#A9A9B0",
   darkGreyColor: "#F8F8F8",
   authBorderColor,
-  blackColor: "#3B3B3B"
+  blackColor: "#3B3B3B",
+  lightGreyColor: "#F6F6F6"
 };

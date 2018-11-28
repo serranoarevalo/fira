@@ -8,17 +8,32 @@ export default class extends React.Component {
     headerTransparent: true,
     headerRight: (
       <TouchableOpacity>
-        <View style={{ height: 45, justifyContent: "center", paddingLeft: 20 }}>
+        <View
+          style={{
+            ...Platform.select({ ios: { heigth: 45 } }),
+            justifyContent: "center",
+            paddingLeft: 20
+          }}
+        >
           <Ionicons
             name={Platform.OS === "ios" ? "ios-heart-empty" : "md-heart-empty"}
             size={Platform.OS === "ios" ? 26 : 20}
+            color="white"
           />
         </View>
       </TouchableOpacity>
     ),
     headerRightContainerStyle: {
-      paddingRight: 9,
-      paddingVertical: 10
+      ...Platform.select({
+        ios: {
+          paddingRight: 9,
+          paddingVertical: 12
+        },
+        android: {
+          paddingRight: 20,
+          paddingVertical: 12
+        }
+      })
     }
   };
 
