@@ -7,10 +7,10 @@ import {
 
 import TabBarIcon from "../components/TabBarIcon";
 import HomeScreen from "../screens/HomeScreen";
-import LinksScreen from "../screens/LinksScreen";
 import SearchScreen from "../screens/SearchScreen";
 import SettingsScreen from "../screens/SettingsScreen";
 import Colors from "../constants/Colors";
+import MessagesScreen from "../screens/MessagesScreen";
 
 const StackNavOptions = {
   headerStyle: { borderBottomColor: Colors.tabBarBorderTop, height: 70 },
@@ -57,7 +57,7 @@ SearchStack.navigationOptions = {
 
 const MessageStack = createStackNavigator(
   {
-    Links: LinksScreen
+    Messages: MessagesScreen
   },
   {
     navigationOptions: { ...StackNavOptions }
@@ -99,7 +99,7 @@ export default createBottomTabNavigator(
     ProfileStack
   },
   {
-    initialRouteName: "HomeStack",
+    initialRouteName: "MessageStack",
     tabBarOptions: {
       showLabel: false,
       style: {

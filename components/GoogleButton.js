@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Ionicons } from "@expo/vector-icons";
-import BigButton from "../BigButton";
+import BigButton from "./BigButton";
 
 const Text = styled.Text`
   margin-left: 10px;

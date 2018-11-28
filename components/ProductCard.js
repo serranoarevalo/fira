@@ -4,8 +4,8 @@ import AutoHeightImage from "react-native-auto-height-image";
 import { withNavigation } from "react-navigation";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import Layout from "../../constants/Layout";
-import Colors from "../../constants/Colors";
+import Layout from "../constants/Layout";
+import Colors from "../constants/Colors";
 
 const Container = styled.View`
   margin-bottom: 20px;

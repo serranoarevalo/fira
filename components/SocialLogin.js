@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import FacebookButton from "../FacebookButton";
-import GoogleButton from "../GoogleButton";
+import FacebookButton from "./FacebookButton";
+import GoogleButton from "./GoogleButton";
 
 const Container = styled.View``;
 

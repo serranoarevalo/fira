@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import BigButton from "../BigButton";
+import BigButton from "./BigButton";
 
 const DarkText = styled.Text`
   color: white;

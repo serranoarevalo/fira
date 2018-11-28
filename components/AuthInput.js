@@ -1,8 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import Mixins from "../../constants/Mixins";
-import Layout from "../../constants/Layout";
+import Mixins from "../constants/Mixins";
+import Layout from "../constants/Layout";
 
 const Input = styled.TextInput`
   padding: 15px 20px;
