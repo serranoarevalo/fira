@@ -18,6 +18,8 @@ const ProductContainer = styled.View`
   elevation: 4;
   background-color: white;
   padding: 30px 20px;
+  z-index: 9;
+  position: relative;
   padding-top: 10px;
 `;
 

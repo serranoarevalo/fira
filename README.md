@@ -13,4 +13,4 @@ Download in [Codekits](https://codekits.co/fira.html)
 - [x] Product Detail
 - [x] Messages
 - [x] Message Thread
-- [ ] Profile
+- [x] Profile
