@@ -16,7 +16,7 @@ const Text = styled.Text`
   font-weight: 500;
 `;
 
-const SmallButton = ({ text, accent = false, onPress }) => (
+const SmallButton = ({ text, accent = false, onPress = null }) => (
   <TouchableOpacity onPress={onPress}>
     <Container accent={accent}>
       <Text accent={accent}>{text}</Text>

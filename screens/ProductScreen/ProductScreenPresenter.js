@@ -6,6 +6,13 @@ import Layout from "../../constants/Layout";
 import Colors from "../../constants/Colors";
 import UserPartials from "../../components/UserPartials";
 
+console.log(Layout.window.height <= 667);
+
+const getHeight = () =>
+  Layout.window.height <= 667
+    ? Layout.window.height / 2.8
+    : Layout.window.height / 2.3;
+
 const Container = styled.View`
   flex: 1;
   background-color: white;
@@ -15,7 +22,7 @@ const ScrollView = styled.ScrollView``;
 
 const Image = styled.Image`
   width: ${Layout.window.width};
-  height: ${Layout.window.height / 2.3};
+  height: ${getHeight()};
   position: relative;
 `;
 
@@ -62,9 +69,9 @@ const ReadMore = styled.Text`
 const ProductScreenPresenter = () => (
   <Container>
     <StatusBar barStyle="light-content" />
-    <ScrollView contentContainerStyle={{ paddingBottom: 40 }}>
+    <ScrollView contentContainerStyle={{ paddingBottom: 40 }} bounces={false}>
       <Swiper
-        style={{ height: Layout.window.height / 2.3, marginBottom: 20 }}
+        style={{ height: getHeight(), marginBottom: 20 }}
         activeDotColor="white"
         dotColor="rgba(255, 255, 255, 0.3)"
       >
