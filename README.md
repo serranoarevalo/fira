@@ -21,7 +21,7 @@ First of all, [download Fira](https://codekits.co/fira.html)
 ### Install Expo
 
 ```bash
-yarn global add expo
+yarn global add expo-cli
 ```
 
 ### Install Dependencies
