@@ -52,6 +52,6 @@ export default createSwitchNavigator(
     Main: ScreensStack
   },
   {
-    initialRouteName: "Main"
+    initialRouteName: "Auth"
   }
 );

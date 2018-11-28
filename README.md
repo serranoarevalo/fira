@@ -4,13 +4,8 @@ eCommerce App React Native Codekit
 
 Download in [Codekits](https://codekits.co/fira.html)
 
-## Screens
+## Preview
 
-- [x] Sign Up
-- [x] Log In
-- [x] Home
-- [x] Search
-- [x] Product Detail
-- [x] Messages
-- [x] Message Thread
-- [x] Profile
+### Android:
+
+Go to [Expo](https://expo.io/@serranoarevalo/fira) and scan the QR Code
