@@ -2,7 +2,9 @@ import React from "react";
 import { Platform, StatusBar } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import styled from "styled-components";
-import { AppLoading, Asset, Font } from "expo";
+import { AppLoading } from "expo";
+import * as Font from "expo-font";
+import { Asset } from "expo-asset";
 
 import AppNavigator from "./navigation/AppNavigator";
 
